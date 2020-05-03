@@ -64,10 +64,39 @@
                             <h3 class="h4 mb-2">Pris</h3>
                               <p class="text-muted mb-0">
                                 <ul>
-                                    <p><l> Såle: 400, </l><l> Puss: 600 </l></p>
+                                    <p><l> Såle: fra 400, </l><l> Puss: 600 </l></p>
                                     <p><l> Puss: 600, </l><l> Hæl: 600 </l></p>
-                                    <l> Skifte hæl: 900 </l>
+                                    <l> MC-utstyr: fra 600 </l>
                                 </ul>
+                                <!-- Trigger/Open The Modal -->
+                                <button id="myBtn">Mer priser</button>
+
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal">
+
+                                  <!-- Modal content -->
+                                  <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h3 class="h4 mb-2">MC</h3>
+                                    <ul>
+                                        <p><l> Såle: fra 400, </l><l> Puss: 600 </l></p>
+                                        <p><l> Puss: 600, </l><l> Hæl: 600 </l></p>
+                                        <l> MC-utstyr: fra 600 </l>
+                                    </ul>
+                                    <h3 class="h4 mb-2">Sko</h3>
+                                    <ul>
+                                        <p><l> Såle: fra 400, </l><l> Puss: 600 </l></p>
+                                        <p><l> Puss: 600, </l><l> Hæl: 600 </l></p>
+                                        <l> MC-utstyr: fra 600 </l>
+                                    </ul>
+                                    <h3 class="h4 mb-2">Diverse</h3>
+                                    <ul>
+                                        <p><l> Såle: fra 400, </l><l> Puss: 600 </l></p>
+                                        <p><l> Puss: 600, </l><l> Hæl: 600 </l></p>
+                                        <l> MC-utstyr: fra 600 </l>
+                                    </ul>
+                                  </div>
+                                </div>
                               </p>
                         </div>
                     </div>
@@ -160,54 +189,15 @@
             </div>
         </section>
         <!-- About-->
-
-      <script type="text/javascript">
-      var $el, $ps, $up, totalHeight;
-
-          $(".sidebar-box .button").click(function() {
-
-            totalHeight = 0
-
-            $el = $(this);
-            $p  = $el.parent();
-            $up = $p.parent();
-            $ps = $up.find("p:not('.read-more')");
-
-            // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-            $ps.each(function() {
-              totalHeight += $(this).outerHeight();
-            });
-
-            $up
-              .css({
-                // Set height to prevent instant jumpdown when max height is removed
-                "height": $up.height(),
-                "max-height": 9999
-              })
-              .animate({
-                "height": totalHeight
-              });
-
-            // fade out read-more
-            $p.fadeOut();
-
-            // prevent jump-down
-            console.log("HEI")
-            return false;
-
-                });
-            </script>
-
         <section class="page-section bg-primary" id="about">
             <div class="container", name="fact_text">
-              <!-- <a name="fact_text"></a> -->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h2 class="text-white mt-0">Om prosjektet</h2>
                         <hr class="divider light my-4" />
                             <div class="sidebar-box">
-                              <p class="text-white-50 mb-4">malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                              <p class="read-more" style="color: red;"><a href="#fact_text" class="button">Les mer!</a></p>
+                              <p class="text-white-50 mb-4">malesuada fames ac turpis egestas. . Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. . Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. </p>
+                              <p class="read-more"><a href="#fact_text" class="button">Les mer!</a></p>
                             </div>
                           </div>
                     </div>

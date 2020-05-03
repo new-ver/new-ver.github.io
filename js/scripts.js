@@ -3,8 +3,75 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
     */
+
+//Price Modal Boxes
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+    //Fade out read more
+      var $el, $ps, $up, totalHeight;
+
+          $(".sidebar-box .button").click(function() {
+
+            totalHeight = 0
+
+            $el = $(this);
+            $p  = $el.parent();
+            $up = $p.parent();
+            $ps = $up.find("p:not('.read-more')");
+
+            // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+            $ps.each(function() {
+              totalHeight += $(this).outerHeight();
+            });
+
+            $up
+              .css({
+                // Set height to prevent instant jumpdown when max height is removed
+                "height": $up.height(),
+                "max-height": 9999
+              })
+              .animate({
+                "height": totalHeight
+              });
+
+            // fade out read-more
+            $p.fadeOut();
+
+            // prevent jump-down
+            console.log("HEI")
+            return false;
+                });
+    //End read more
+
     (function($) {
   "use strict"; // Start of use strict
+
+
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
