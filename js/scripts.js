@@ -63,7 +63,6 @@
             $p.fadeOut();
 
             // prevent jump-down
-            console.log("HEI")
             return false;
                 });
     //End read more
@@ -124,6 +123,7 @@
     },
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+      // text: hei
     }
   });
 
