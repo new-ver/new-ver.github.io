@@ -4,7 +4,7 @@
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
     */
 
-//Price Modal Boxes
+  //Price Modal Boxes
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -32,40 +32,40 @@
   }
 
 
-    //Fade out read more
-      var $el, $ps, $up, totalHeight;
+//Fade out read more
+var $el, $ps, $up, totalHeight;
 
-          $(".sidebar-box .button").click(function() {
+    $(".sidebar-box .button").click(function() {
 
-            totalHeight = 0
+      totalHeight = 0
 
-            $el = $(this);
-            $p  = $el.parent();
-            $up = $p.parent();
-            $ps = $up.find("p:not('.read-more')");
+      $el = $(this);
+      $p  = $el.parent();
+      $up = $p.parent();
+      $ps = $up.find("p:not('.read-more')");
 
-            // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-            $ps.each(function() {
-              totalHeight += $(this).outerHeight();
-            });
+      // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+      $ps.each(function() {
+        totalHeight += $(this).outerHeight();
+      });
 
-            $up
-              .css({
-                // Set height to prevent instant jumpdown when max height is removed
-                "height": $up.height(),
-                "max-height": 9999
-              })
-              .animate({
-                "height": totalHeight
-              });
+      $up
+        .css({
+          // Set height to prevent instant jumpdown when max height is removed
+          "height": $up.height(),
+          "max-height": 9999
+        })
+        .animate({
+          "height": totalHeight
+        });
 
-            // fade out read-more
-            $p.fadeOut();
+      // fade out read-more
+      $p.fadeOut();
 
-            // prevent jump-down
-            return false;
-                });
-    //End read more
+      // prevent jump-down
+      return false;
+          });
+
 
     (function($) {
   "use strict"; // Start of use strict
@@ -122,8 +122,10 @@
       preload: [0, 1]
     },
     image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-      // text: hei
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.find('img').attr('title');
+        }
     }
   });
 
